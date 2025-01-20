@@ -49,7 +49,7 @@ class FinOpsAnalyzer:
 
                 Question: {question}
 
-                Table: `<gcp_project.dataset.table_name>`
+                Table: `<project_id>.<dataset_id>.<table_id>`
 
                 Important notes:
                 - Monthly forecast columns:
@@ -81,13 +81,13 @@ class FinOpsAnalyzer:
                 Return ONLY the SQL query, no explanations or comments.
                 """
             },
-            "billing": {
+            "recharge_azure": {
                 "prompt": """
-                You are a SQL expert. Given the following question about FinOps data, generate a BigQuery SQL query.
+                You are a SQL expert. Given the following question about FinOps data, generate a BigQuery SQL query on top of this azure cloud billing data.
 
                 Question: {question}
 
-                Table: <gcp_project.dataset.table_name>
+                Table: <project_id>.<dataset_id>.<table_id>
                 Columns:
                     account_name		STRING	
                     account_type		STRING	
@@ -100,7 +100,6 @@ class FinOpsAnalyzer:
                     valid_to		STRING	
                     subscription_id		STRING	
                     resource_group		STRING	
-
                 return the SQL query to get the data from the table
                 """
             }
@@ -135,7 +134,7 @@ class FinOpsAnalyzer:
 
     # Question: {question}
 
-    # Table: `<gcp_project.dataset.table_name>`
+    # Table: `<project_id>.<dataset_id>.<table_id>`
 
     # Important notes:
     # - Monthly forecast columns:
@@ -307,7 +306,7 @@ class FinOpsAnalyzer:
             )
 
 @app.post("/analyze")
-async def analyze_question(question: str, data_model: str = "forecast"):
+async def analyze_question(question: str, data_model: str = "cloud_forecast"):
     analyzer = FinOpsAnalyzer(data_model)
     return await analyzer.analyze(question)
 

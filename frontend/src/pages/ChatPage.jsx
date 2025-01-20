@@ -5,6 +5,8 @@ import { SendOutlined, LoadingOutlined } from "@ant-design/icons";
 import axios from "axios";
 import ChatContent from "../components/ChatContent";
 import "./ChatPage.css";
+import LoadingProgress from "../components/LoadingProgress/LoadingProgress";
+
 
 const { Title } = Typography;
 
@@ -123,7 +125,7 @@ const ChatPage = () => {
             disabled={isLoading}
           />
           <TreeSelect
-          suffixIcon={null}
+            suffixIcon={null}
             style={{ width: 180 }}
             value={selectedModel}
             dropdownStyle={{ maxHeight: 400, overflow: "auto" }}
@@ -140,6 +142,7 @@ const ChatPage = () => {
             disabled={!inputValue.trim() || isLoading}
           />
         </div>
+        <LoadingProgress isLoading={isLoading} />
         {hasInteracted && <ChatContent messages={messages} />}
       </div>
     </div>
