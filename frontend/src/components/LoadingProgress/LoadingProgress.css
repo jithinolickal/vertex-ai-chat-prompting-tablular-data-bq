@@ -1,0 +1,14 @@
+.loading-progress {
+  text-align: center;
+  padding: 30px 0;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

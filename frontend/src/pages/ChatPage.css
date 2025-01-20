@@ -1,0 +1,105 @@
+/* src/pages/ChatPage.css */
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the page takes exactly viewport height */
+html,
+body,
+#root {
+  height: 100%;
+}
+.chat-page {
+  height: 100%;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden; /* For border radius to work */
+}
+
+.content-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.content-wrapper.has-interacted {
+  justify-content: flex-start;
+}
+
+.welcome-text {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.input-section {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #e8e8e8;
+  position: sticky;
+  top: 24px;
+  z-index: 10;
+  gap: 12px;
+}
+
+.input-section:hover {
+  border-color: #40a9ff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.input-section .ant-tree-select {
+  flex-shrink: 0; /* Prevent TreeSelect from shrinking */
+}
+
+.input-section .ant-input {
+  font-size: 16px;
+  padding: 8px 0;
+  background: transparent;
+}
+
+.input-section .ant-btn {
+  margin-left: 8px;
+  border-radius: 6px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-section .anticon {
+  font-size: 18px;
+}
+
+.welcome-text h3.ant-typography {
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.welcome-text p {
+  color: #666;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
