@@ -71,7 +71,7 @@ class FinOpsAnalyzer:
         # Data model configurations
         self.data_models = {
             "cloud_forecast": {
-                "table_name": "`wpp-it-fo-platform-dev-sbx.test_jithin.cloud_forecast_sample`",
+                "table_name": "``",
                 "schema": """
              Important columns:
              - last_30day_cost: FLOAT   actual billing cost for last 30 days
@@ -90,7 +90,7 @@ class FinOpsAnalyzer:
              """
             },
             "recharge_azure": {
-                "table_name": "`wpp-it-fo-platform-dev-sbx.recharge_analytics.fct_azure_recharge_breakdown`",
+                "table_name": "``",
                 "schema": """
              Columns:
                     uuid		STRING	Generated uuid with azure date.
@@ -123,7 +123,7 @@ class FinOpsAnalyzer:
                     tags		STRING	Tags assigned to the resource. Doesn't include resource group tags. Can be used to group or distribute costs for internal chargeback.
                     bm_cartesis_code		STRING	An identifier for the country and entity being invoiced/billed/charged for Subscription account.
                     bill_to		STRING	An identifier for the relevant Op Company/Agency managing the recharge.
-                    cost_category		STRING	WPP custom logic to identify cost by category (Reservation, SavingsPlan, Amortized, Marketplace, and Azure Subcriptions).
+                    cost_category		STRING	 custom logic to identify cost by category (Reservation, SavingsPlan, Amortized, Marketplace, and Azure Subcriptions).
                     list_price		FLOAT	On Demand price for the resource with EDP
                     resource_ri_sp_consumed		FLOAT	Actual Resveration / SavingsPlan consumption at resource level, only displays for Amortized cost category
                     resource_ri_sp_wastage		FLOAT	For RI/SP purchased centrally - central adjustment portion assigned back to resource level based on usage ratio proportionally, Otherwise unused component charged to RI/SP owner itself. Only displays for Amortized cost category
@@ -141,7 +141,7 @@ class FinOpsAnalyzer:
              """
             },
             "cloud_consumption": {
-                "table_name": "`wpp-it-fo-platform-dev-sbx.manual_ai_datasources.fct_cloud_consumption_monthly`",
+                "table_name": "``",
                 "schema": """
              Columns:
                     subscription_id		STRING	Cloud account ID - AWS Account ID / GCP Project ID / Azure Subscription ID

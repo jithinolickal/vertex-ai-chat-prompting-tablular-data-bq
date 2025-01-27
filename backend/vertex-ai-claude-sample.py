@@ -4,7 +4,7 @@
 # pip3 install -U 'anthropic[vertex]'
 
 # TODO(developer): Update and un-comment below line
-PROJECT_ID = "wpp-it-fo-platform-dev-sbx"
+PROJECT_ID = ""
 
 from anthropic import AnthropicVertex
 

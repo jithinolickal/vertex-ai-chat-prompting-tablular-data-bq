@@ -51,7 +51,7 @@ class FinOpsAnalyzer:
 
                 Question: {question}
 
-                Table: `wpp-it-fo-platform-dev-sbx.test_jithin.cloud_forecast_sample`
+                Table: ``
 
                 Important notes:
                 - Monthly forecast columns:
@@ -89,7 +89,7 @@ class FinOpsAnalyzer:
 
                 Question: {question}
 
-                Table: wpp-it-fo-platform-dev-sbx.recharge_analytics.fct_azure_recharge_breakdown
+                Table: 
 
                 Important notes:
                     - table has azure billing data. It also has business mapping data that is used to map the billing data to the business.
@@ -126,7 +126,7 @@ class FinOpsAnalyzer:
                     tags		STRING	Tags assigned to the resource. Doesn't include resource group tags. Can be used to group or distribute costs for internal chargeback.
                     bm_cartesis_code		STRING	An identifier for the country and entity being invoiced/billed/charged for Subscription account.
                     bill_to		STRING	An identifier for the relevant Op Company/Agency managing the recharge.
-                    cost_category		STRING	WPP custom logic to identify cost by category (Reservation, SavingsPlan, Amortized, Marketplace, and Azure Subcriptions).
+                    cost_category		STRING	 custom logic to identify cost by category (Reservation, SavingsPlan, Amortized, Marketplace, and Azure Subcriptions).
                     list_price		FLOAT	On Demand price for the resource with EDP
                     resource_ri_sp_consumed		FLOAT	Actual Resveration / SavingsPlan consumption at resource level, only displays for Amortized cost category
                     resource_ri_sp_wastage		FLOAT	For RI/SP purchased centrally - central adjustment portion assigned back to resource level based on usage ratio proportionally, Otherwise unused component charged to RI/SP owner itself. Only displays for Amortized cost category
