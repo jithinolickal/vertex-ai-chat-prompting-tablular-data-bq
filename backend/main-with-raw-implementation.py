@@ -27,14 +27,14 @@ class FinOpsAnalyzer:
     def __init__(self):
         print("Loading model and initializing BigQuery client...")
         # Initialize Vertex AI with region
-        vertexai.init(project='<gcp_project>',
-                      location='<region>')
+        vertexai.init(project='wpp-it-fo-platform-dev-sbx',
+                      location='europe-west2')
         self.model = GenerativeModel("gemini-pro")
         self.bq_client = bigquery.Client()
 
         # You can modify this based on your actual table
         self.table_schema = """
-     Table: <gcp_project.dataset.table_name>
+     Table: wpp-it-fo-platform-dev-sbx.test_jithin.cloud_forecast_sample
      Columns:
         - key		STRING
         - year		INTEGER
@@ -97,12 +97,12 @@ class FinOpsAnalyzer:
             # Example queries:
             # 1. For last 30 days cost total:
             # SELECT SUM(last_30day_cost) as total_cost
-            # FROM `<gcp_project.dataset.table_name>`
+            # FROM `wpp-it-fo-platform-dev-sbx.test_jithin.cloud_forecast_sample`
             # WHERE year = EXTRACT(YEAR FROM CURRENT_DATE())
 
             # 2. For specific month's cost in current year:
             # SELECT SUM(aug) as august_cost
-            # FROM `<gcp_project.dataset.table_name>`
+            # FROM `wpp-it-fo-platform-dev-sbx.test_jithin.cloud_forecast_sample`
             # WHERE year = EXTRACT(YEAR FROM CURRENT_DATE())
             
             response = self.model.generate_content(prompt)
