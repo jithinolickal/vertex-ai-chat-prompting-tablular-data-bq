@@ -46,7 +46,7 @@ const LoadingProgress = ({ isLoading }) => {
   return (
     <div className="loading-progress">
       <Space>
-        <LoadingOutlined style={{ fontSize: "18px", color: "#1677ff" }} />
+        <LoadingOutlined style={{ fontSize: "18px", color: "#3a67a7" }} />
         <Text>{loadingStates[currentState]?.text || "Processing..."}</Text>
       </Space>
     </div>

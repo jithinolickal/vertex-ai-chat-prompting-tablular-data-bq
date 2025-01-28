@@ -31,6 +31,7 @@ body,
 
 .content-wrapper.has-interacted {
   justify-content: flex-start;
+  padding: 1rem
 }
 
 .welcome-text {
@@ -50,7 +51,7 @@ body,
   margin: 0 auto;
   border: 1px solid #e8e8e8;
   position: sticky;
-  top: 24px;
+  /* top: 24px; */
   z-index: 10;
   gap: 12px;
 }

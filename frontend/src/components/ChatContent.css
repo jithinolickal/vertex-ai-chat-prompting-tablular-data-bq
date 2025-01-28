@@ -32,12 +32,13 @@
 }
 
 .user-message .message-content {
-  background-color: #1677ff;
+  background-color: #3a67a7;
   color: white;
 }
 
 .ai-message .message-content {
   background-color: #f5f5f5;
+  width: 100%;
 }
 
 .ai-avatar {
